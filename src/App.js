@@ -1,6 +1,7 @@
 import { useContext } from 'react'
 import { ThemeContext } from './contexts/theme'
 import Header from './components/Header/Header'
+import About from './components/About/About'
 import './App.css'
 
 const App = () => {
@@ -9,7 +10,10 @@ const App = () => {
   return (
     <div id='top' className={`${themeName} app`}>
       <Header />
-      Hola mundo!
+      
+      <main>
+        <About />
+      </main>
     </div>
   )
 }
