@@ -1,7 +1,9 @@
+import './Footer.css'
+
 const Footer = () => (
   <footer>
-    <a href="https://github.com/manicho/portfolio" target="_blank" rel="noreferrer">
-      Created By Mauricio Ortega
+    Made with <span className="heart">❤</span> by <a href="https://github.com/manicho/portfolio" target="_blank" rel="noreferrer">
+      Mauricio Ortega
     </a>
   </footer>
 )

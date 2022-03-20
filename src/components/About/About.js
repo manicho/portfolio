@@ -9,7 +9,7 @@ const About = () => {
     <div>
       {name && (
         <h1>
-          Hi, I am <span>{name}.</span>
+          Hi, I'm <span>{name}.</span>
         </h1>
       )}
 

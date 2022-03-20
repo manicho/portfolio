@@ -5,6 +5,7 @@ import CloseIcon from '@mui/icons-material/Close';
 import MenuIcon from '@mui/icons-material/Menu';
 import { ThemeContext } from '../../contexts/theme'
 import { projects, skills, contact } from './content'
+import './Navbar.css'
 
 const Navbar = () => {
   const [{ themeName, toggleTheme }] = useContext(ThemeContext)
@@ -49,7 +50,7 @@ const Navbar = () => {
               onClick={toggleNavList}
               className='link link--nav'
             >
-              Contact
+              Contact {JSON.stringify(showNavList)}
             </a>
           </li>
         ) : null}
@@ -58,12 +59,12 @@ const Navbar = () => {
       <button
         type='button'
         onClick={toggleTheme}
-        className='btn btn--icon nav__hamburger'
+        className='btn btn--icon nav__theme'
         aria-label='toggle theme'
       >
         {themeName === 'dark' ? <WbSunnyIcon /> : <Brightness2Icon />}
       </button>
-
+      {JSON.stringify(showNavList)}
       <button
         type='button'
         onClick={toggleNavList}
