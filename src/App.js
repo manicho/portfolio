@@ -7,6 +7,7 @@ import About from './components/About/About'
 import Contact from './components/Contact/Contact'
 import ScrollToTop from './components/ScrollToTop/ScrollToTop'
 import Footer from './components/Footer/Footer'
+import BottomNavbar from './components/Navbar/BottomNavbar'
 import './App.css'
 
 const App = () => {
@@ -21,6 +22,7 @@ const App = () => {
       <Contact /> 
       <ScrollToTop />
       <Footer />
+      <BottomNavbar />
     </div>
   )
 }
