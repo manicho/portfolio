@@ -2,15 +2,19 @@ import GitHubIcon from '@mui/icons-material/GitHub'
 import LinkedInIcon from '@mui/icons-material/LinkedIn'
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 // import Home from './Home'
-import { about } from './content'
-import './About.scss'
+import { home } from './content'
+import './Home.scss'
 
-const About = () => {
-  const { name, role, description, resume, social } = about
+const Home = () => {
+  const { name, role, description, resume, social } = home
 
   return (
-    <main className='about-container'>
-      About
+    <main className='home-container'>
+      <p className='text'>
+        Born in 1988 in Santiago, Chile. <br />
+        I believe in keep the things simple. <br />
+        I'm strongly working in make something <br /> useful for the humanity.
+      </p>
       {/* {role && <h2>A {role}.</h2>} */}
       {/* <h2>{description}</h2> */}
 
@@ -41,4 +45,4 @@ const About = () => {
   )
 }
 
-export default About
+export default Home

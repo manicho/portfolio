@@ -1,20 +1,22 @@
 import header from './content'
 import Navbar from '../Navbar/Navbar'
+import './Header.scss'
 
 const Header = () => {
-  const { homepage, title } = header
+  const { label, title } = header
 
   return (
-    <header>
-      <h3>
-        {homepage ? (
-          <a href={homepage} className='link'>
+    <header className='site-header'>
+      {title && (
+        <div className='header-content'>
+          <h1 className='title'>
             {title}
-          </a>
-        ) : (
-          title
-        )}
-      </h3>
+          </h1>
+          <p className='label'>
+            {label}
+          </p>
+        </div>
+      )}
       <Navbar />
     </header>
   )

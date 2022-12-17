@@ -1,16 +1,33 @@
 import GitHubIcon from '@mui/icons-material/GitHub'
 import LinkedInIcon from '@mui/icons-material/LinkedIn'
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
-// import Home from './Home'
-import { about } from './content'
-import './About.scss'
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+} from "react-router-dom";
+import Home from '../Home/Home'
+import About from '../About/About'
+import { main } from './content'
+import './Main.scss'
+import Contact from '../Contact/Contact';
+import Projects from '../Projects/Projects';
 
-const About = () => {
-  const { name, role, description, resume, social } = about
+const Main = () => {
+  const { name, role, description, resume, social } = main
 
   return (
-    <main className='about-container'>
-      About
+    <main className='main-container'>
+      {/* <Router> */}
+        <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/projects" element={<Projects />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
+        </Routes>
+      {/* </Router> */}
+      {/* <Home />
+      <About /> */}
       {/* {role && <h2>A {role}.</h2>} */}
       {/* <h2>{description}</h2> */}
 
@@ -41,4 +58,4 @@ const About = () => {
   )
 }
 
-export default About
+export default Main

@@ -1,4 +1,4 @@
-const about = {
+const main = {
   // all the properties are optional - can be left empty or deleted
   name: 'Mauricio',
   role: 'Software Engineer',
@@ -11,4 +11,4 @@ const about = {
   },
 }
 
-export { about }
+export { main }

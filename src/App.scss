@@ -1,0 +1,73 @@
+@font-face {
+  font-family: AnkaCoder;
+  src: url(./assets/fonts/AnkaCoder-r.ttf);
+}
+
+@font-face {
+  font-family: AnkaCoder;
+  src: url(./assets/fonts/AnkaCoder-b.ttf);
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: CyberpunkWaifus;
+  src: url(./assets/fonts/CyberpunkWaifus.ttf);
+}
+
+@font-face {
+  font-family: NeuMachinaLight;
+  src: url(./assets/fonts/NeueMachina-Light.otf) format("opentype");
+}
+
+@font-face {
+  font-family: NeuMachina;
+  src: url(./assets/fonts/NeueMachina-Regular.otf) format("opentype");
+}
+
+.app {
+  font-family: NeuMachina;
+  height: 100vh;
+  width: 100vw;
+  font-size: 20px;
+  background-color: var(--clr-alt1);;
+  line-height: 1.5;
+  color: var(--clr-alt5);
+  padding: 40px;
+
+  .frame {
+    display: flex;
+    border: solid 1px white;
+    height: 100%;
+    padding: 40px;
+    background-color: var(--clr-alt2);
+  }
+}
+
+.light {
+  --clr-bg: #fcfcfc;
+  --clr-bg-alt: #fff;
+  --clr-fg: #555;
+  --clr-fg-alt: #444;
+  --clr-primary: #2978b5;
+  // --shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.dark {
+  --clr-bg: #13141a;
+  --clr-bg-alt: #2a2f4c;
+  --clr-fg: #bdbddd;
+  --clr-fg-alt: #cdcdff;
+  --clr-alt1: #000004;
+  --clr-alt2: #00171a;
+  --clr-alt3: #505f68;
+  --clr-alt4: #acb4b6;
+  --clr-alt5: #f4f7f7;
+  // --shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+  //   rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+
+@media (max-width: 900px) {
+  .app {
+    padding: 2rem 2rem 4.5rem 2rem;
+  }
+}
