@@ -15,7 +15,7 @@
     .link {
       display: flex;
       align-items: center;
-      margin-bottom: 8px;
+      margin-bottom: 12px;
       color: var(--clr-alt5);
 
       .social-icon {
@@ -26,6 +26,10 @@
       .link-text {
         font-size: 13px;
         margin: 0;
+      }
+
+      &:last-of-type {
+        margin-bottom: 0;
       }
     }
 

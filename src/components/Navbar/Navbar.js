@@ -1,5 +1,5 @@
 import { useContext, useState } from 'react'
-import { Link } from "react-router-dom";
+import { Link, useLocation } from 'react-router-dom'
 import Brightness2Icon from '@mui/icons-material/Brightness2'
 import WbSunnyIcon from '@mui/icons-material/WbSunny'
 import { Container, Navbar, Button } from 'react-bootstrap'
@@ -15,13 +15,18 @@ import './Navbar.scss'
 const NavbarComponent = () => {
   const [{ themeName, toggleTheme }] = useContext(ThemeContext)
   const [showNavList, setShowNavList] = useState(false)
-  // const history = useHistory();
+  const location = useLocation()
+
+  console.log(location.pathname)
+  const isCurrentSection = (sectionPath) => location.pathname === sectionPath
 
   const handleClick = (e) => {
     e.preventDefault()
     console.log('entra', e.target.href)
     // history.push("/home");
   }
+
+  // const
 
   const toggleNavList = () => setShowNavList(!showNavList)
 
@@ -41,10 +46,36 @@ const NavbarComponent = () => {
           </Navbar.Brand>
         </Container> */}
       {/* <Container className='nav-pill'> */}
-      <Link to="/" className='navbar-link'>Home</Link>
-      <Link to="/projects" className='navbar-link'>Projects</Link>
-      <Link to="/about" className='navbar-link'>About</Link>
-      <Link to="/contact" className='navbar-link'>Contact</Link>
+      <Link
+        to='/'
+        className={`navbar-link ${isCurrentSection('/') ? 'selected' : ''}`}
+      >
+        Home
+      </Link>
+      <Link
+        to='/projects'
+        className={`navbar-link ${
+          isCurrentSection('/projects') ? 'selected' : ''
+        }`}
+      >
+        Projects
+      </Link>
+      <Link
+        to='/about'
+        className={`navbar-link ${
+          isCurrentSection('/about') ? 'selected' : ''
+        }`}
+      >
+        About
+      </Link>
+      <Link
+        to='/contact'
+        className={`navbar-link ${
+          isCurrentSection('/contact') ? 'selected' : ''
+        }`}
+      >
+        Contact
+      </Link>
       {/* <Navbar.Brand href='/' onClick={handleClick}>Home</Navbar.Brand>
       <Navbar.Brand href='/about' onClick={handleClick}>About</Navbar.Brand>
       <Navbar.Brand href='/work' onClick={handleClick}>Work</Navbar.Brand>

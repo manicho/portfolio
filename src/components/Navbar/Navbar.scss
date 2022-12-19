@@ -80,6 +80,12 @@
   .navbar-link {
     text-decoration: none;
     color: white;
+    padding: 4px;
+
+    &.selected {
+      color: var(--clr-alt1);
+      background-color: var(--clr-alt5);
+    }
   }
 
   .navbar-brand {

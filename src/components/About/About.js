@@ -1,7 +1,7 @@
 import GitHubIcon from '@mui/icons-material/GitHub'
 import LinkedInIcon from '@mui/icons-material/LinkedIn'
 import { useState } from 'react'
-import { FaGithub, FaLinkedin } from 'react-icons/fa'
+import { FaGithub, FaLinkedin, FaFilePdf } from 'react-icons/fa'
 // import Home from './Home'
 import { about } from './content'
 import './About.scss'
@@ -20,14 +20,14 @@ const About = () => {
   }
 
   return (
-    <main className='about-container'>
+    <div className='about-container'>
       <p>About</p>
 
       <div className='link-list'>
         {resume && (
           <a href={resume} id='resume' className='link' onMouseEnter={toggleText}
           onMouseLeave={toggleText}>
-            R
+            <FaFilePdf className='social-icon' />
             <p className='link-text' hidden={showText !== 'resume'}>resume</p>
           </a>
         )}
@@ -37,6 +37,8 @@ const About = () => {
             {social.github && (
               <a
                 href={social.github}
+                target="_blank"
+                rel="noreferrer"
                 arial-label='github'
                 id='github'
                 className='link'
@@ -53,6 +55,8 @@ const About = () => {
             {social.linkedin && (
               <a
                 href={social.linkedin}
+                target="_blank"
+                rel="noreferrer"
                 arial-label='linkedin'
                 id='linkedin'
                 className='link'
@@ -61,14 +65,14 @@ const About = () => {
               >
                 <FaLinkedin className='social-icon' />
                 <p className='link-text' hidden={showText !== 'linkedin'}>
-                  {social.linkedin}
+                  Mauricio Ortega Auriol
                 </p>
               </a>
             )}
           </>
         )}
       </div>
-    </main>
+    </div>
   )
 }
 

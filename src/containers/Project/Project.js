@@ -1,31 +1,32 @@
 import uniqid from 'uniqid'
 import GitHubIcon from '@mui/icons-material/GitHub'
 import LaunchIcon from '@mui/icons-material/Launch'
+import './Project.scss';
 
 const Project = ({ project }) => (
-  <div>
-    <h3>{project.name}</h3>
+  <div className='project-list'>
+    <p className='title'>{project.name}</p>
 
-    <p>{project.description}</p>
+    <p className='description'>{project.description}</p>
     {project.stack && (
-      <ul>
+      <ul className='stack-list'>
         {project.stack.map((item) => (
-          <li key={uniqid()}>{item}</li>
+          <li key={uniqid()} className='label'>{item}</li>
         ))}
       </ul>
     )}
 
     {project.sourceCode && (
-      <a href={project.sourceCode} aria-label='source code'>
+      <a href={project.sourceCode} aria-label='source code' className='source-icon'>
         <GitHubIcon />
       </a>
     )}
 
-    {project.livePreview && (
+    {/* {project.livePreview && (
       <a href={project.livePreview}>
         <LaunchIcon />
       </a>
-    )}
+    )} */}
   </div>
 )
 

@@ -9,7 +9,7 @@ const Home = () => {
   const { name, role, description, resume, social } = home
 
   return (
-    <main className='home-container'>
+    <div className='home-container'>
       <p className='text'>
         Born in 1988 in Santiago, Chile. <br />
         I believe in keep the things simple. <br />
@@ -41,7 +41,7 @@ const Home = () => {
           </>
         )}
       </div> */}
-    </main>
+    </div>
   )
 }
 

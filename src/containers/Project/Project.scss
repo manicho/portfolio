@@ -1,0 +1,28 @@
+.project-list {
+  // scroll-behavior: smooth;
+  .title {
+    font-size: 24px;
+    margin: 0;
+  }
+
+  .description {
+    font-size: 13px;
+    margin: 0;
+  }
+
+  .stack-list {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+
+    .label {
+      margin-right: 5px;
+      font-size: 10px;
+
+      &:last-of-type {
+        margin-right: 0;
+      }
+    }
+  }
+}

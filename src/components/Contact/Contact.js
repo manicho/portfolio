@@ -9,7 +9,7 @@ const Contact = () => {
   const { name, role, description, resume, social } = contact
 
   return (
-    <main className='contact-container'>
+    <div className='contact-container'>
       Contact
       {/* {role && <h2>A {role}.</h2>} */}
       {/* <h2>{description}</h2> */}
@@ -37,7 +37,7 @@ const Contact = () => {
           </>
         )}
       </div> */}
-    </main>
+    </div>
   )
 }
 

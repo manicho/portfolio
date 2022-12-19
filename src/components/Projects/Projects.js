@@ -8,13 +8,13 @@ const Projects = () => {
 
   return (
     <section className='projects-container'>
-      <h2>Projects</h2>
+      <p className='projects-title'>Projects</p>
 
-      <div>
+      {/* <div> */}
         {projects.map(project => (
           <ProjectContainer key={uniqid()} project={project} />
         ))}
-      </div>
+      {/* </div> */}
     </section>
   )
 }
